@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Light Institute</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'page1' %}">Home</a></li>
+                <li><a href="{% url 'page2' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <nav>
+          <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#terms-of-use">Terms of Use</a></li>
+            <li><a href="#copyright-notices">Copyright Notices</a></li>
+          </ul>
+        </nav>
+      </footer>
+</body>
+</html>

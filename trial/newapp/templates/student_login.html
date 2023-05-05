@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Login{% endblock %}
+
+{% block content %}
+  <h3>Student Login</h3>
+  {% if error %}
+    <p><strong>{{ error }}</strong></p>
+  {% endif %}
+  <form method="post" action="{% url 'student_portal' %}">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}

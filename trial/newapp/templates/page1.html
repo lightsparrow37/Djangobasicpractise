@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Page 1{% endblock %}
+
+{% block content %}
+<style>
+    main {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      section {
+        flex: 1 1 300px;
+        margin-right: 20px;
+      }
+      
+      section:last-child {
+        margin-right: 0;
+      }
+      
+      h2 {
+        font-size: 24px;
+        margin: 0;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Style the testimonials */
+      blockquote {
+        margin: 0;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-left: 5px solid #333;
+      }
+      
+      blockquote cite {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+<main>
+    <section>
+      <h2>Latest News</h2>
+      <ul>
+        <li>Upcoming event: Annual Science Fair on June 1st.</li>
+        <li>New policy: All students must wear school uniform from next academic year.</li>
+        <li>Reminder: Parent-teacher meeting on May 15th.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#grades">Grades</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Testimonials</h2>
+      <blockquote>
+        "My experience at this institute has been excellent. The teachers are knowledgeable and supportive, and the facilities are top-notch."
+        <cite>- John Smith, Student</cite>
+      </blockquote>
+    </section>
+  </main>
+{% endblock %}
